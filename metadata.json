@@ -1,0 +1,6 @@
+{
+  "name": "Supermarket Sales Analysis Dashboard",
+  "description": "An internship-level supermarket sales analysis and management platform featuring real-time KPI metrics, interactive Chart.js visualizations, role-based access, CRUD operations, and data analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
