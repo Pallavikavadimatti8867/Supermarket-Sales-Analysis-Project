@@ -12,6 +12,8 @@ export interface User {
 }
 
 export interface UserAccount extends User {
+  passwordHash?: string;
+  salt?: string;
   password?: string;
   isRealAccount?: boolean;
 }
