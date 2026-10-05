@@ -2,7 +2,7 @@
 An engineering internship-grade Supermarket Sales Analysis and Intelligence Platform. This platform provides interactive business intelligence visualizations, automated data auditing, financial computations, and real email/password authentication. It can be run locally in Visual Studio Code or in any modern browser.
 🌟 Key Features
 🔐 Real Email & Password Authentication (Zero External Cloud Needed)
-Real Email IDs: Log in or register using any valid email address (e.g. pallavisk46@gmail.com or custom company emails).
+Real Email IDs: Log in or register using any valid email address (e.g. name@gmail.com company emails).
 Client-Side SHA-256 Encryption: Passwords are cryptographically salted and hashed using standard Web Crypto API (crypto.subtle.digest). Plaintext passwords are never stored.
 Role-Based Access Control (RBAC):
 Admin: Full access to all transactions, create/update/delete permissions, data cleaning engine, dataset reset, cross-executive benchmarking.
