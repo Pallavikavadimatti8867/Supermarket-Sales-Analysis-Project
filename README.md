@@ -1,22 +1,18 @@
 🏪 Supermarket Sales Analysis Dashboard (Full-Stack BI System)
 An engineering internship-grade Supermarket Sales Analysis and Intelligence Platform. This platform provides interactive business intelligence visualizations, automated data auditing, financial computations, and real email/password authentication. It can be run locally in Visual Studio Code or in any modern browser.
-
 🌟 Key Features
 🔐 Real Email & Password Authentication (Zero External Cloud Needed)
 Real Email IDs: Log in or register using any valid email address (e.g. pallavisk46@gmail.com or custom company emails).
 Client-Side SHA-256 Encryption: Passwords are cryptographically salted and hashed using standard Web Crypto API (crypto.subtle.digest). Plaintext passwords are never stored.
-
 Role-Based Access Control (RBAC):
 Admin: Full access to all transactions, create/update/delete permissions, data cleaning engine, dataset reset, cross-executive benchmarking.
 Admin Executer: Authentication via personal email ID, real-time transaction recording with auto-calculation formulas, personal performance tracking, target milestones.
-
 ⚡ Real-Time Financial Calculations
 Automatically computes:
 
 
 📊 Live Interactive KPI Metrics & Chart.js Visualizations
 8 High-Impact KPI Cards: Total Sales, Total Transactions, Products Sold, Average Order Value (AOV), Unique Customers, Total Discounts, Total Tax, and Average Customer Rating.
-
 13 Interactive Chart.js Visualizations:
 Sales Trend Over Time (Daily line chart with gradient fill)
 Monthly Revenue & Month-over-Month (MoM) Growth
@@ -39,16 +35,12 @@ Printable official supermarket sales invoice receipts.
 Pandas-equivalent data quality audit detecting duplicate invoice keys, formula calculation drift, out-of-bounds ratings, and missing values.
 One-click cleaning engine to re-calculate formulas, impute missing values, and deduplicate records.
 CSV Sales File Importer with live validation report.
-
 📁 Enterprise Reports & Export Hub
 Instant export of filtered data to CSV and Microsoft Excel (.xls).
 Print-ready PDF report layouts for executive financial reviews.
-
 🏗️ Project Architecture & Directory Layout
-
 code
 Code
-
 supermarket-sales-analysis/
 ├── backend/
 │   ├── app.py                      # Flask application factory & blueprint registration
@@ -132,7 +124,7 @@ npm run dev
 🔑 Login & Authentication Guide
 You can sign in with any valid real email ID and password:
 User Type	Email ID	Password	Access Role
-Admin	pallavisk46@gmail.com	Admin123!	System Admin (Full CRUD, Deletion, Cleaning)
+System Admin (Full CRUD, Deletion, Cleaning)
 System Admin	admin@supermarket.com	admin123	System Admin (Full CRUD, Deletion, Cleaning)
 Sales Executive	sarah.jenkins@supermarket.com	exec123	Sales Operations (Branch A transactions)
 💡 Custom Email Registration: You can click the "Create Account" tab on the login page to register any real email (e.g. yourname@gmail.com) with a password of at least 6 characters.
@@ -142,3 +134,12 @@ The included dataset (data/supermarket_sales.csv) contains 1,020+ realistic sale
 3 Physical Supermarket Branches: Branch A (Yangon), Branch B (Mandalay), Branch C (Naypyitaw).
 Payment Distributions: Ewallet, Cash, and Credit card.
 Mathematical Consistency: Total Sales = Unit Price × Quantity; Final Amount = Total Sales + 5% Tax - Discount.
+🎓 Internship Evaluation & Viva Defense Guide
+Why MongoDB for supermarket transaction systems?
+Retail POS and supermarket systems deal with fluctuating invoice metadata (dynamic discounts, loyalty clubs, multi-category items). MongoDB's schema flexibility avoids the rigid migration overhead of relational SQL while its compound B-tree indexes (invoiceId, date, branch) provide sub-millisecond query latency for dashboard filters.
+Role of Pandas & NumPy in the analytics engine?
+Rather than processing thousands of records with nested Python loops, data is streamed into Pandas DataFrames. Using vectorized operations, Pandas calculates metrics like Month-over-Month growth (pct_change()), average customer lifetime value, Pareto category distributions, and standard deviations in microseconds. NumPy array math ensures mathematical precision across all currency calculations.
+How does the system ensure data integrity?
+The automated pipeline identifies primary key duplication on Invoice IDs, enforces formula bounds (Final Amount = Total + Tax - Discount), imputes missing customer ratings using group averages, and flags discrepancies before presenting clean business intelligence metrics.
+How is password security handled without external cloud services?
+Passwords are cryptographically salted and hashed using standard SHA-256 via the browser's native Web Crypto API. Plaintext passwords are never saved in local storage or transmitted insecurely.
