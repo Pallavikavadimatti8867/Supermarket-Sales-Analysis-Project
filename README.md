@@ -1,18 +1,22 @@
 🏪 Supermarket Sales Analysis Dashboard (Full-Stack BI System)
 An engineering internship-grade Supermarket Sales Analysis and Intelligence Platform. This platform provides interactive business intelligence visualizations, automated data auditing, financial computations, and real email/password authentication. It can be run locally in Visual Studio Code or in any modern browser.
+
 🌟 Key Features
 🔐 Real Email & Password Authentication (Zero External Cloud Needed)
 Real Email IDs: Log in or register using any valid email address (e.g. pallavisk46@gmail.com or custom company emails).
 Client-Side SHA-256 Encryption: Passwords are cryptographically salted and hashed using standard Web Crypto API (crypto.subtle.digest). Plaintext passwords are never stored.
+
 Role-Based Access Control (RBAC):
 Admin: Full access to all transactions, create/update/delete permissions, data cleaning engine, dataset reset, cross-executive benchmarking.
 Admin Executer: Authentication via personal email ID, real-time transaction recording with auto-calculation formulas, personal performance tracking, target milestones.
+
 ⚡ Real-Time Financial Calculations
 Automatically computes:
 
 
 📊 Live Interactive KPI Metrics & Chart.js Visualizations
 8 High-Impact KPI Cards: Total Sales, Total Transactions, Products Sold, Average Order Value (AOV), Unique Customers, Total Discounts, Total Tax, and Average Customer Rating.
+
 13 Interactive Chart.js Visualizations:
 Sales Trend Over Time (Daily line chart with gradient fill)
 Monthly Revenue & Month-over-Month (MoM) Growth
@@ -35,12 +39,16 @@ Printable official supermarket sales invoice receipts.
 Pandas-equivalent data quality audit detecting duplicate invoice keys, formula calculation drift, out-of-bounds ratings, and missing values.
 One-click cleaning engine to re-calculate formulas, impute missing values, and deduplicate records.
 CSV Sales File Importer with live validation report.
+
 📁 Enterprise Reports & Export Hub
 Instant export of filtered data to CSV and Microsoft Excel (.xls).
 Print-ready PDF report layouts for executive financial reviews.
+
 🏗️ Project Architecture & Directory Layout
+
 code
 Code
+
 supermarket-sales-analysis/
 ├── backend/
 │   ├── app.py                      # Flask application factory & blueprint registration
