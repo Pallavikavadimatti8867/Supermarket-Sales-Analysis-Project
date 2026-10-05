@@ -169,16 +169,3 @@ git branch -M main
 git remote add origin https://github.com/<your-github-username>/supermarket-sales-analysis.git
 git push -u origin main
 ```
-
----
-
-## 🎓 Internship Evaluation & Viva Defense Guide
-
-1. **Why MongoDB?**
-   Retail POS and supermarket systems deal with fluctuating invoice metadata (dynamic discounts, loyalty clubs, multi-category items). MongoDB's schema flexibility avoids the rigid migration overhead of relational SQL while its compound B-tree indexes (`invoiceId`, `date`, `branch`) provide sub-millisecond query latency for dashboard filters.
-
-2. **Role of Pandas & NumPy?**
-   Instead of iterating through thousands of records in slow Python loops, data is streamed into Pandas DataFrames. Vectorized NumPy routines compute rolling aggregations, month-over-month growth rates, category Pareto distributions, and standard deviations in microseconds.
-
-3. **Data Scrubbing & Integrity:**
-   The automated pipeline identifies primary key duplication on invoices, enforces formula bounds, imputes missing values using group averages, and flags discrepancies before presenting clean business intelligence metrics.
